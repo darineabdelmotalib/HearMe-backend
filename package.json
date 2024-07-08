@@ -4,7 +4,12 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "migrate": "knex migrate:latest",
+    "rollback": "knex migrate:rollback",
+    "seed": "knex seed:run",
+    "start": "node server.js",
+    "migrate:down": "npx knex migrate:down",
+    "migrate:rollback": "knex migrate:rollback",
     "dev": "node --watch server.js"
   },
   "author": "",
